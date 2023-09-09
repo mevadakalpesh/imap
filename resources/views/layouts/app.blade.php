@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+  
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
@@ -190,18 +190,100 @@
                     <li class="nav-label first">Main Menu</li>
                     <li>
                         <a  href="{{ route('home') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
+                            <i class="fa-solid fa-gauge"></i>
                             <span class="nav-text">Dashboard</span></a>
                     </li>
                     
                     @if(isAdmin())
-                    <li>
+                     <li>
                         <a  href="{{ route('user.index') }}" aria-expanded="false">
                             <i class="icon icon-single-04"></i>
-                            <span class="nav-text">Users</span>
+                            <span class="nav-text">User</span>
                         </a>
                     </li>
+                    
+                    <li>
+                        <a  href="{{ route('service.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="nav-text">Service </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a  href="{{ route('brand.index') }}" aria-expanded="false">
+                           <i class="fa-solid fa-hand-holding-medical"></i>
+                            <span class="nav-text">Brands & Emergency </span>
+                        </a>
+                    </li>
+                
+                    
+                     <li>
+                        <a  href="{{ route('brand-category.index') }}" aria-expanded="false">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                            <span class="nav-text">Brand Category </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('part.index') }}" aria-expanded="false">
+                           <i class="fa fa-cogs" aria-hidden="true"></i>
+                            <span class="nav-text">Part </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a  href="{{ route('car-type.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-car"></i>
+                            <span class="nav-text">Car Types  </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('engine-type.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span class="nav-text">Engine Types</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('user-car.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-address-card"></i>
+                            <span class="nav-text">User Car </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('invoice.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span class="nav-text">Invoice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="{{ route('quotation.index') }}" aria-expanded="false">
+                            <i class="fa-solid fa-quote-right"></i>
+                            <span class="nav-text">Quotation</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('aboutUs') }}" aria-expanded="false">
+                            <i class="fa-solid fa-quote-right"></i>
+                            <span class="nav-text">About Us</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a  href="{{ route('termCondition') }}" aria-expanded="false">
+                            <i class="fa-solid fa-quote-right"></i>
+                            <span class="nav-text">Term Condition</span>
+                        </a>
+                    </li>
+                    
                     @endif
+                    
+                    
 
                     <!-- <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -241,6 +323,16 @@
             <!-- row -->
             <div class="container-fluid">
               
+              @if($errors->any())
+    <div class="error-summary">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li class="text-danger">{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
                @yield('content')
 
 
@@ -321,7 +413,6 @@
 
 @stack('js')
 
-
 <script>
   let tosterOption = {
                     positionClass: "toast-top-right",
@@ -366,5 +457,6 @@
   toastr.warning("Warning",'{{  session()->get("warning") }}' , tosterOption);
 </script>
 @endif
+
 </body>
 </html>

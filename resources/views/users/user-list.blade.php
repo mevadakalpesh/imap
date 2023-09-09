@@ -27,9 +27,13 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Status</th>
+                <th>Phone</th>
+                <th>isVerified</th>
+                <th>isActive</th>
+                <th>Created At</th>
                 <th width="100px">Action</th>
             </tr>
         </thead>
@@ -57,9 +61,13 @@
         ajax: "{{ route('user.index') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'image', name: 'image'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
-            {data: 'status_with_name', name: 'status_with_name'},
+            {data: 'phone', name: 'phone'},
+            {data: 'isVerified', name: 'isVerified'},
+            {data: 'isActive', name: 'isActive'},
+            {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
     });

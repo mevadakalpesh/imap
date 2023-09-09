@@ -1,0 +1,175 @@
+
+Date: 20/08/2023 - 21/08/2023 [18 hr] [old]
+
+Here is time and task list which has been done yet:
+ -> build User Login system api configartion on live server : 6 h
+ -> integrate admin theme and list of use includeing deployment on server  : 12 h 
+
+
+Date => 22/08/2023  
+Work hours  => [12 hr]
+Start Time => 8:23 AM 
+End Time => 11:20 PM 
+Break & Other Time => 4 hr 
+-----------------------------
+-> understand full app flow 
+-> read your pdf and build drawing database structure
+-> review order api and check dependency
+-> create migration & Models with each modules 
+-> build user modules with user list , delete etc...
+
+
+
+
+Date => 24/08/2023  
+Work hours  => [11 hr]
+Start Time => 8:47 AM 
+End Time => 12:05 PM 
+Break & Other Time => 6 hr 
+-----------------------------
+-> create table migration & model for service & Emergengy modules
+-> create table column with datatype and build relationahip each Other
+-> create crud opertion for Brands & Category 
+-> crud brand ,Emergency, Part with BrandCategory relationship 
+-> add the menu on side bar 
+-> insert & Update with service with database relationship
+-> always support and call 
+-> code deploye on live server 
+-> import database on live server 
+
+
+
+
+Date => 24/08/2023  
+Work hours  => [7 hr]
+Start Time => 9:30 AM 
+End Time => 11:35  PM 
+Break & Other Time => 9 hr  (Hospital)
+---------------------------------------------------------
+-> deploye whole modules on live server 
+-> build script for give permisrion to all files and forder 
+-> change home api response with test data for check app
+-> manage tow project one for API & Second For Admin 
+-> deploye all API related change on API project 
+-> fixed admin issue related of image & save data issue 
+-> display all data of users 
+-> delpoye the code on server with database change
+
+
+
+
+Date => 25/08/2023  
+Work hours  => [13 hr]
+Start Time => 8:30 AM 
+End Time => 11:22  PM 
+Break & Other Time => 4 hr  
+----------------------------------------------------------
+-> fixed all issue of home api & deploye the code on live server 
+-> resolve emergency data different issue Such as (ServiceCategory,BrandCategory,ServiceCategoryId)
+-> test Emergengy with static data and put the dummy data 
+-> fixed emergency issue of when click on emergengy next screen will not come 
+-> if user dont have car then service will not work build validation 
+-> compare dynamic data with old change and rename column name base on requirement
+-> meeting and call & support 
+-> build database stucture & migration for car_types & engine_types 
+-> deploye the code on live server and test it with app 
+
+
+Date => 26/08/2023  
+Work hours  => [14 hr]
+Start Time => 08:10 AM 
+End Time => 12:16  PM 
+Break & Other Time => 4 hr  
+----------------------------------------------------------
+-> car Type Crud Opertion with proper validation 
+-> handle car sub type and give selection of type car & Car Sub type
+-> build realtionahip between Car and Sub Car type
+-> Build Engine type Crud Opertion With validation
+-> save all media image on storage to public for resolve image display issue 
+-> build User Car Moduls Database Structure and migration 
+-> build relationahip with carType ,EngineType , CarSubtype,User 
+-> list All car data with delete & Edit & give 
+-> give selection of sub car type base on select car type 
+-> give selection & Button on list and edit of status for Approved & Disapproved 
+-> build all code on live server & test
+-> build the api for create car 
+-> upload the Api code on API server 
+-> Call & Meeting Support 
+-> User Car List Api With same column name of old response of Api
+
+
+
+Date => 27/08/2023  
+Work hours  => [13 hr]
+Start Time => 10:39 AM 
+End Time => 11:22  PM 
+Break & Other Time => 4 hr  
+
+-> fixed user car details problem
+-> fixed blank screen on service sub category 
+-> create e-mail template for email verification
+-> create mail class & message view for message successfully 
+-> create middelware to ristic the user who is not verifyed 
+-> deploye the code on api server 
+-> change mail credential & status of user after verify 
+-> fixed price issue if price is null then dont display the price on serveice 
+-> fixed user profile image issue 
+
+
+Date => 28/08/2023  
+No Work 
+
+
+Date => 29/08/2023  
+Work hours  => [9 hr]
+Start Time => 8:44 AM 
+End Time => 11:22  PM 
+Break & Other Time => 4 hr  
+----------------------------------------------------------
+-> build email markdown template for password rest 
+-> send mail with expireable token for reset password 
+-> update password and deploye the code on live server ans check with app 
+-> build a middeware for is_verify 
+-> change app name laravel to Click & Fixed 
+-> find & change icon of all menus relate of topic
+-> make message page and design after successfully reset password
+-> create invoice schema migration, module,controller 
+
+
+Date => 30/08/2023  
+Work hours  => [12 hr]
+Start Time => 8:38 AM 
+End Time => 11:22  PM 
+Break & Other Time => 4 hr  
+----------------------------------------------------------
+-> create invoice table and with columns
+-> create invoice_fields column to store the item 
+-> Crud Operation of  invoice with dynamic items with validation 
+-> make design of invoice with core html 
+-> add button for download pdf of invoice 
+-> generate pdf dynamic & create layout of pdf 
+-> set realtionahip bettween invoice and it's items 
+-> create quotation table and column
+-> create crud operation for quotation same functionality like invoice 
+-> create new pdf layout for quotation
+-> give button for download pdf of quotation
+
+
+Date => 30/08/2023  
+Work hours  => [4 hr]
+ ----------------------------------------------------------
+-> fixed the PDF Issue which Not Support Arbic Text 
+-> edit pdf Design base on client feedback 
+-> deployed the code and change db query on live server 
+-> test it with live server and add pdf name base on invoice id 
+
+
+Payment Info :
+
+Total Hours : 113 hr
+Per Hours Price : $7 (Only For You)
+Total Price : $ 791
+
+ 
+ 
+ 

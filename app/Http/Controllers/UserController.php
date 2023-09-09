@@ -12,29 +12,32 @@ class UserController extends Controller
   */
   public function index(Request $request)
     {
+      
+          
       if ($request->ajax()) {
-            $data = User::latest()->where('is_admin','!=',User::$admin)->get();
+            $data = User::where('is_admin','!=',User::$admin)->get();
+          
             return Datatables::of($data)
                     ->addIndexColumn()
+                    ->editColumn('image', function(User $brand) {
+                       return '<img src="'.$brand->image.'" width="100px" height="100px" />';
+                      })
+                      ->editColumn('isVerified', function(User $brand) {
+                        $verifyStatus = "Not Verified";
+                        $class = "danger";
+                        if($brand->email_verified_at){
+                          $verifyStatus = "Verified";
+                          $class ="primary";
+                        } 
+                       return '<span class="badge bg-'.$class.'">'.$verifyStatus.'</span>';
+                      })
                     ->addColumn('action', function($row){
-                           
-                           $btn = '
-                           <a href="'.route('user.edit',$row->id).'" data-userid="'.$row->id.'" class="edit btn btn-primary btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                           <button type="button" data-userid="'.$row->id.'" class="btn delete-user btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-                           ';
-                           
-                           
-                           if($row->status == User::$pending){
-                             $btn .= ' <button type="button" data-userid="'.$row->id.'" class="change-status btn delete-user btn-success btn-sm" data-status="Approved">Approved</button>';
-                           }else {
-                             $btn .= ' <button type="button" data-userid="'.$row->id.'" class="change-status btn delete-user btn-warning btn-sm" data-status="Pending">Pending</button>';
-                           }
-     
+                           $btn = '<button type="button" data-userid="'.$row->id.'" class="btn delete-user btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>';
                             return $btn;
                     })
-                    ->rawColumns(['action'])
+                    ->rawColumns(['isVerified','image','action'])
                     ->make(true);
-        }
+      }
         
         return view('users.user-list');
     }
